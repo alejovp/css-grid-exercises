@@ -6,20 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
   <title>CSS grid-auto-flow Explained!</title>
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 400px 200px;
+      /* decide wheter to put the new implicit element on 
+      a new row (default) or a new column */
+      grid-auto-flow: column;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
     <div class="item">1</div>
     <div class="item">2</div>
+    <div class="item">3</div>
   </div>
-
-  <style>
-    .container {
-      display: grid;
-      grid-gap: 20px;
-    }
-  </style>
 </body>
 
 </html>
