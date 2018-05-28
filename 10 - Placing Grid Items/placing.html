@@ -6,6 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
   <title>Placing Grid Items!</title>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .poop {
+      background: #BADA55;
+      /* grid-column: span 2; */
+      /* Istead of telling how much to span we can specify where to start and finish*/
+      /* to specify this limits we use the tracks number */
+      /* grid-column-start: 2;
+      grid-column-end: 5; */
+      /* this is the same as above (start and finish)*/
+      /* grid-column: 2 / 5; */
+      /* or */
+      /* grid-column: 2 / span 3; */
+      /* or */
+      /* grid-column: span 3 / 5; */
+      /* you can also tell it where to start and if yo don´t know the 
+      edge you can just write -1 to expand until the last track */
+      grid-column: 2 / -1;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,7 +44,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -42,14 +68,6 @@
     <div class="item item29">29</div>
     <div class="item item30">30</div>
   </div>
-
-  <style>
-    .container {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(5, 1fr);
-    }
-  </style>
 </body>
 
 </html>
