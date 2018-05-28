@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
   <title>Grid Template Areas: Line Names from Grid Areas!</title>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      /* defining grid without columns or rows just using areas */
+      grid-template-areas:
+        "x x x x y y y y"
+        "x x x x y y y y"
+        "x x x x y y y y"
+        "x x x x y y y y"
+    }
+    .item3 {
+      /* using line names */
+      grid-column: x-start / y-end;
+      /* fix to the button of an area */
+      grid-row-end: x-end;
+    }
+  </style>
 </head>
 
 <body>
@@ -41,13 +60,6 @@
     <div class="item item29">29</div>
     <div class="item item30">30</div>
   </div>
-
-  <style>
-    .container {
-      display: grid;
-      grid-gap: 20px;
-    }
-  </style>
 </body>
 
 </html>
